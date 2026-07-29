@@ -1,21 +1,24 @@
 //Feito por Douglas Alves Costa
-//Nivel Aventureiro
+//Nivel Mestre
 
-package supertrunfo;
+package manager;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
 /**
- * Classe responsável pela criação e gerenciamento
- * do EntityManagerFactory.
+ * Classe utilitária responsável por gerenciar
+ * o EntityManagerFactory.
  */
 public final class JPAUtil {
 
+    private static final String UNIDADE_PERSISTENCIA =
+            "superTrunfoMestrePU";
+
     private static final EntityManagerFactory FACTORY =
             Persistence.createEntityManagerFactory(
-                    "superTrunfoPU"
+                    UNIDADE_PERSISTENCIA
             );
 
     private JPAUtil() {
